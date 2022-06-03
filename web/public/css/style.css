@@ -1,0 +1,801 @@
+html, body {
+  font-family: "Open Sans", sans-serif;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  color: #777;
+  font-weight: 400;
+  width: 100% !important;
+  /*height: 100% !important;*/
+  overflow-x: hidden;
+  background-color: #4A40DB;
+}
+body {
+    position: relative;
+}
+h2 {
+  margin: 0 0 20px;
+  font-weight: 800;
+  font-size: 36px;
+  color: #333;
+}
+h3 {
+  font-family: "Red Hat Display";
+  font-size: 20pt;
+  font-weight: 600;
+  color: #FFF;
+}
+h4 {
+    font-family: "Grenze Gotisch";
+    font-size: 42pt;
+    font-weight: 700;
+    color: #FFC107;
+    padding-bottom: 20px;
+}
+h5 {
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 20px;
+}
+p {
+  font-family: "Red Hat Display";
+  font-size: 18pt;
+  font-weight: 300;
+  color: #FFF
+}
+p.intro {
+  margin: 12px 0 0;
+  line-height: 24px;
+}
+a {
+  color: #608dfd;
+  font-weight: 400;
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: #608dfd;
+}
+ul,
+ol {
+  list-style: none;
+}
+ul,
+ol {
+  padding: 0;
+  webkit-padding: 0;
+  moz-padding: 0;
+}
+hr {
+  height: 2px;
+  width: 70px;
+  text-align: center;
+  position: relative;
+  background: #1e7a46;
+  margin-bottom: 20px;
+  border: 0;
+}
+.anchor {
+    display: block;
+    height: 80px; /* height of nav, in this case 54px */
+    width: 100%;
+    padding: 0;
+    visibility: hidden;
+    content: '';
+}
+
+/* Navigation */
+#menu {
+  padding: 15px;
+  transition: all 0.8s;
+}
+#menu.navbar-default {
+  background-color: #ff00;
+  background-image: url(../img/nav_bg_image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-color: rgba(231, 231, 231, 0);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+#menu a.navbar-brand {
+  font-family: "Grenze Gotisch";
+  font-size: 24pt;
+  font-weight: 700;
+  color: #FFC107;
+}
+#menu.navbar-default .navbar-nav > li > a {
+  font-family: "Red Hat Display", sans-serif;
+  color: #FFC107;
+  font-size: 15pt;
+  font-weight: 500;
+  padding: 8px 2px;
+  border-radius: 0;
+  margin: 9px 20px 0;
+}
+#menu.navbar-default .navbar-nav > li > a:after {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, #FF6F00 0%, #FFB300 100%);
+  content: "";
+  transition: width 0.2s;
+}
+#menu.navbar-default .navbar-nav > li > a:hover:after {
+  width: 100%;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  background-color: transparent;
+}
+.navbar-default .navbar-nav > .active > a:after,
+.navbar-default .navbar-nav > .active > a:hover:after,
+.navbar-default .navbar-nav > .active > a:focus:after {
+  display: block !important;
+  position: absolute !important;
+  left: 0 !important;
+  bottom: -1px !important;
+  width: 100% !important;
+  height: 2px !important;
+  background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%) !important;
+  content: "" !important;
+  transition: width 0.2s !important;
+}
+
+.navbar-toggle {
+  border-radius: 8;
+}
+.navbar-default .navbar-toggle {
+  border-color: #FFC107;
+  background-color: transparent;
+}
+.navbar-default .navbar-toggle:hover{
+    border-color: #FFC107;
+    background-color: transparent;
+}
+.navbar-default .navbar-toggle:focus {
+  border-color: #FFC107;
+  background-color: transparent;
+}
+.navbar-default .navbar-toggle:hover > .icon-bar {
+  background-color: #FFC107;
+}
+.navbar-default .navbar-toggle > .icon-bar {
+    background-color: #FFB300;
+  }
+.section-title {
+  margin-bottom: 70px;
+}
+.section-title h2 {
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+.section-title h2::after {
+  position: absolute;
+  content: "";
+  background: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
+  height: 4px;
+  width: 60px;
+  bottom: 0;
+  margin-left: -30px;
+  left: 50%;
+}
+.section-title p {
+  font-size: 18px;
+}
+.btn-custom {
+  font-family:"Red Hat Display";
+  color: #CCCBFA;
+  background-color: #4A40DB;
+  border: solid 1px #CCCBFA;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 34px;
+  padding-right: 34px;
+  letter-spacing: 1px;
+  margin: 0;
+  font-size: 14pt;
+  font-weight: 500;
+  border-radius: 10px;
+  transition: all 0.5s linear;
+}
+.btn-custom:hover,
+.btn-custom:focus,
+.btn-custom.focus,
+.btn-custom:active,
+.btn-custom.active {
+  color: #fff;
+  background-image: none;
+  background-color: #6372ff;
+}
+.btn:active,
+.btn.active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+a:focus,
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+  outline: none;
+  outline-offset: none;
+}
+/* Header Section */
+.intro {
+  display: table;
+  width: 100%;
+  background: url(../img/intro-bg.jpg) center center no-repeat;
+  background-color: #e5e5e5;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+.intro .overlay {
+  background: rgba(0, 0, 0, 0);
+}
+.intro h1 {
+  font-family: "Grenze Gotisch", sans-serif;
+  color: #FFC107;
+  font-size: 82px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.intro h1 span {
+  font-weight: 800;
+  color: #5ca9fb;
+}
+.intro p {
+  font-family: "Red Hat Display", sans-serif;
+  color: #FFECB3;
+  font-size: 17pt;
+  font-weight: 300;
+  line-height: 30px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+.intro-text {
+  padding-top: 260px;
+  padding-bottom: 180px;
+  text-align: center;
+}
+/* Minting Section */
+.mint {
+  text-align: center;
+}
+.mint h1 {
+  font-family: "Grenze Gotisch", sans-serif;
+  color: #FFC107;
+  font-size: 98pt;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.mint p {
+    font-family: "Grenze Gotisch", sans-serif;
+    color: #EBEAFD;
+    font-size: 24pt;
+    font-weight: 400;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+.contentContainer {
+    min-height: 512px;
+    background-size: cover;
+    background-image: url(../img/mint_bg.jpg);
+    padding-top: 40px;
+    margin-top: 2em;
+    margin-left: 4em;
+    margin-right: 4em;
+    border-radius: 40px;
+}
+.mintButton {
+    background-color: #FFC107;
+}
+.inputContainer {
+  display: grid;
+  grid-template-columns: 36% 1fr;
+  grid-auto-rows: 1fr, 1fr;
+}
+.inputTitle {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    font-family: "Grenze Gotisch", sans-serif;
+    color: #FFC107;
+    font-size: 34pt;
+    font-weight: 700;
+    text-align: left;
+    line-height: 42pt;
+    margin-top: 30px;
+}
+.inputAddress {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    font-family: "Grenze Gotisch", sans-serif;
+    color: #FFECB3;
+    font-size: 26pt;
+    font-weight: 400;
+    text-align: left;
+    padding-top: 12px;
+    padding-bottom: 10px;
+}
+.mintAddress {
+  font-family: "Red Hat Display", sans-serif;
+  text-transform: none;
+  color: #ffffff;
+  font-size: 18pt;
+  font-weight: 300;
+}
+.inputMinted {
+    grid-column-start: 2;
+    grid-row-start: 3;
+    font-family: "Grenze Gotisch", sans-serif;
+    color: #ffffff;
+    font-size: 26pt;
+    font-weight: 700;
+    text-align: left;
+    padding: 0px 5px;
+    margin-bottom: 30px;
+}
+.mintedText{
+    font-family: "Grenze Gotisch", sans-serif;
+    color: #ffffff;
+    font-size: 18pt;
+    font-weight: 400;
+    text-align: left;
+}
+.inputPrice {
+    grid-column-start: 2;
+    grid-row-start: 4;
+    font-family: "Grenze Gotisch", sans-serif;
+    color: #ffffff;
+    font-size: 18pt;
+    font-weight: 500;
+    text-align: left;
+}
+.inputCurrency {
+    font-family: "Red Hat Display", sans-serif;
+    color: #ffffff;
+    font-size: 12pt;
+    font-weight: 400;
+    text-align: left;
+}
+.inputQuantity {
+    grid-column-start: 2;
+    grid-row-start: 5;
+    text-align: left;
+}
+form {
+    position: relative;
+    display: flex;
+    max-width: 700px;
+    min-width: 500px;
+    box-sizing: border-box;
+  }
+form .question label {
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 10pt;
+    font-weight: 400;
+    color: #EBEAFD;
+    font-weight: 500;
+    box-sizing: border-box;
+    padding: 0px 5px;
+    display: block;
+    position: absolute;
+    margin-top: 0px;
+    z-index: 2;
+    pointer-events: none;
+}
+form .question input[type="text"] {
+    appearance: none;
+    background-color: #EBEAFD;
+    border: 2px solid #4B41DF;
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 32pt;
+    font-weight: 700;
+    max-width: 95px;
+    width: 100%;
+    padding: 0px 10px;
+    border-radius: 16px;
+    color: #4B41DF;
+    text-align: center;
+  }
+form .question input[type="text"]:focus {
+    outline: none;
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 32pt;
+    font-weight: 700;
+    background: #EBEAFD;
+    color: #4B41DF;
+}
+form button {
+    margin-left: 35px;
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 24pt;
+    font-weight: 700;
+    background-color: #3a28c7;
+    border: 2px solid #CCCBFA;
+    color: #EBEAFD;
+    line-height: 1;
+    box-sizing: border-box;
+    padding: 12px 60px;
+    border-radius: 16px;
+    position: relative;
+    transition: all 0.25s linear;
+}
+form button:hover, form button:focus {
+    color: #FFC107;
+    background-color: #4B41DF;
+    border: 2px solid #EBEAFD;
+}
+
+
+/* About Section */
+.about {
+    padding-top: 0px;
+    margin-top: 2em;
+}
+.aboutGridContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr, 1fr, 1fr;
+    width: 100%;
+}
+.aboutDescriptionContainer {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    padding-left: 10px;
+    width: 100%;
+    background-image: url(../img/about_side_float.jpg);
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-position: top right;
+    background-size: 220px;
+}
+.population {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+.aboutBigNumber {
+    font-family: "Grenze Gotisch", sans-serif;
+    font-size: 108pt;
+    font-weight: 700;
+    color: #FFC107;
+}
+.aboutStrong {
+    font-family: "Red Hat Display";
+    margin-left: 15px;
+    font-size: 40pt;
+    font-weight: 300;
+    color: #FFF;
+}
+.aboutDescription {
+    width: 70%;
+    margin-left: 5em;
+    margin-right: 4em;
+    margin-bottom: 5em;
+}
+
+.aboutCommunity {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    text-align: center;
+    margin-bottom: 5em;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+.aboutpfp {
+    max-width: 35%;  
+    height: auto;
+    margin-bottom: 2em;
+    padding: 2em;
+}
+.aboutTribes {
+    grid-column-start: 1;
+    grid-row-start: 3;
+    text-align: center;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+.tribeGrid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 1fr, 1fr;
+    grid-gap: 50px;
+    padding: 30px;
+}
+.land {
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+.air {
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+.sea {
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+.space {
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+.aboutTribeImage {
+    max-height: 100%;
+    max-width: 100%;
+}
+.aboutTribeTitle {
+    font-family: "Grenze Gotisch";
+    font-size: 34pt;
+    line-height: 34pt;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #3209AF;
+    text-align: left;
+}
+.aboutTribeDescription {
+    font-family: "Red Hat Display";
+    font-size: 14pt;
+    font-weight: 300;
+    color: #FFF;
+    text-align: left;
+}
+
+/* FAQ Section*/
+.faqContainer {
+    margin-left: 6em;
+    margin-right: 6em;
+    text-align: center;
+}
+.faqQuestion {
+    font-family: "Grenze Gotisch";
+    font-size: 24pt;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #FF8F00;
+    text-align: left;
+}
+.faqAnswer {
+    font-family: "Red Hat Display";
+    font-size: 14pt;
+    font-weight: 400;
+    color: #FFF;
+    text-align: left;
+    margin-bottom: 1em;
+}
+
+/* Team Section */
+.teamContainer {
+    margin-left: 6em;
+    margin-right: 6em;
+    text-align: center;
+}
+.teamGrid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 50px;
+    padding: 30px;
+    margin-bottom: 4em;
+}
+.col-1 {
+    grid-column-start: 1;
+}
+.col-2 {
+    grid-column-start: 2;
+}
+.col-3 {
+    grid-column-start: 3;
+}
+.col-4 {
+    grid-column-start: 4;
+}
+.teamImage {
+    max-height: 100%;
+    max-width: 100%;
+    margin-bottom: 12px;
+}
+.teamRole {
+    font-family: "Red Hat Display";
+    font-size: 12pt;
+    font-weight: 700;
+    color: #FFF;
+}
+.teamTitle {
+    font-family: "Red Hat Display";
+    font-size: 20pt;
+    font-weight: 300;
+    color: #FFC107;
+}
+.teamSocial {
+    font-family: "Red Hat Display";
+    font-size: 12pt;
+    font-weight: 500;
+    color: #FFECB3;
+}
+.advisoryTitle {
+    color: #3209AF;
+}
+.advisorGrid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-gap: 30px;
+    padding: 30px;
+    text-align: center;
+}
+.advisorName {
+    font-family: "Red Hat Display";
+    font-size: 16pt;
+    font-weight: 300;
+    color: #CCCBFA;
+}
+/* Footer Section*/
+#footer {
+  background: #CCCBFA;
+  padding: 30px 0;
+}
+#footer p {
+  color: #888;
+  font-size: 14px;
+}
+#footer a {
+  color: #608dfd;
+}
+#footer a:hover {
+  border-bottom: 2px solid #608dfd;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+    .contentContainer {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+    .intro-text {
+        padding-top: 170px;
+        padding-bottom: 90px;
+    }
+    .intro h1 {
+        font-size: 62px;
+        font-weight: 700;
+    }
+    .intro p {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+    /* Minting */
+    .inputContainer {
+        grid-template-columns: 5% 1fr;
+    }
+    .inputTitle {
+        margin-top: 0px;
+        width: 200px;
+        line-height: 32pt;
+    }
+    .inputAddress {
+        width: 200px;
+    }
+    form button {
+        margin-left: 15px;
+    }
+    .about {
+        margin-top: 0;
+    }
+    .aboutDescription {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+    .aboutBigNumber {
+        line-height: 0;
+    }
+    .aboutStrong {
+        margin-left: 0;
+    }
+    .aboutDescriptionContainer {
+        background-size: 130px;
+        padding-right: 10px;
+    }
+    .aboutDescription {
+        width: 100%;
+        padding-right: 1em;
+        background-image: "";
+    }
+    .aboutCommunity {
+        margin-bottom: 5em;
+    }
+    .aboutpfp {
+        max-width: 45%;  
+        height: auto;
+        margin-bottom: 2em;
+        padding: 10px;
+    }
+    .tribeGrid {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        grid-gap: 10px;
+        padding: 10px;
+    }
+    .land {
+        grid-column-start: 1;
+        grid-row-start: 1;
+    }
+    .air {
+        grid-column-start: 1;
+        grid-row-start: 2;
+    }
+    .sea {
+        grid-column-start: 1;
+        grid-row-start: 3;
+    }
+    .space {
+        grid-column-start: 1;
+        grid-row-start: 4;
+    }
+    .faqContainer {
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+    .faqQuestion {
+        line-height: 24pt;
+    }
+    .teamContainer {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .teamGrid {
+        width: 100%;
+        grid-template-columns:  repeat(1, minmax(0, 1fr));
+        grid-gap: 50px;
+        padding: 30px;
+        margin-bottom: 4em;
+    }
+    .col-1 {
+        grid-column-start: 1;
+        grid-row-start: 1;
+    }
+    .col-2 {
+        grid-column-start: 1;
+        grid-row-start: 2;
+    }
+    .col-3 {
+        grid-column-start: 1;
+        grid-row-start: 3;
+    }
+    .col-4 {
+        grid-column-start: 1;
+        grid-row-start: 4;
+    }
+    .advisorGrid {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        grid-gap: 80px;
+        padding: 30px;
+    }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+   
+}
+
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 992px) {
+    .intro-text {
+        padding-top: 300px;
+        padding-bottom: 290px;
+    }
+}

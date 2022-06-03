@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+  nginx:
+    build:
+      dockerfile: Dockerfile
+      context: ./nginx
+    ports:
+      - 8080:80
+  web:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./web
+    container_name: web
+
+  api:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./api
+    container_name: api
